@@ -1,7 +1,17 @@
-import React from "react";
+import NavBar from "@/Components/NavBar";
+import React, { useState } from "react";
 
 const HomePage = () => {
-  return <div className="text-9xl text-red-900">HomePage</div>;
+  const [nav, setNav] = useState(false);
+  const navOpen = () => setNav(true);
+  const navClose = () => setNav(false);
+  return (
+    <div className="overflow-x-hidden">
+      <div className="">
+        <NavBar />
+      </div>
+    </div>
+  );
 };
 
 export default HomePage;
