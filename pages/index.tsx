@@ -1,3 +1,4 @@
+import Hero from "@/Components/Hero";
 import MobileNavBar from "@/Components/MobileNavBar";
 import NavBar from "@/Components/NavBar";
 import React, { useState } from "react";
@@ -14,6 +15,7 @@ const HomePage = () => {
         <NavBar navOpen={navOpen} />
 
         {/* Hero Section  */}
+        <Hero />
       </div>
     </div>
   );
