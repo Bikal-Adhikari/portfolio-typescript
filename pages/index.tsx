@@ -1,3 +1,4 @@
+import About from "@/Components/About";
 import Hero from "@/Components/Hero";
 import MobileNavBar from "@/Components/MobileNavBar";
 import NavBar from "@/Components/NavBar";
@@ -16,6 +17,10 @@ const HomePage = () => {
 
         {/* Hero Section  */}
         <Hero />
+        <div className="relative z-[30]">
+          {/* about me  */}
+          <About />
+        </div>
       </div>
     </div>
   );
