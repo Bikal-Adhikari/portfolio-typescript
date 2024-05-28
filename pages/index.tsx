@@ -2,7 +2,9 @@ import About from "@/Components/About";
 import Hero from "@/Components/Hero";
 import MobileNavBar from "@/Components/MobileNavBar";
 import NavBar from "@/Components/NavBar";
+import Projects from "@/Components/Projects";
 import Skills from "@/Components/Skills";
+
 import React, { useState } from "react";
 
 const HomePage = () => {
@@ -23,6 +25,7 @@ const HomePage = () => {
           <About />
           {/* skills  */}
           <Skills />
+          <Projects />
         </div>
       </div>
     </div>
