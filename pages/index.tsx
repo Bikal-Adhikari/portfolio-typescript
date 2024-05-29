@@ -1,4 +1,5 @@
 import About from "@/Components/About";
+import ContactMe from "@/Components/ContactMe";
 import Footer from "@/Components/Footer";
 import Hero from "@/Components/Hero";
 import MobileNavBar from "@/Components/MobileNavBar";
@@ -28,6 +29,8 @@ const HomePage = () => {
           <Skills />
           <Projects />
           {/* Contact Me */}
+
+          <ContactMe />
 
           <Footer />
         </div>
