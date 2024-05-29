@@ -1,11 +1,47 @@
 import React from "react";
+import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <div className="pt-[8rem] pb-[4rem] bg-[#02050a]">
-      <div className="grid border-b-[1px] pb-[6rem] border-gray-400 grid-cols-1 lg:grid-cols-3 md:grid-cols-2 w-[80%] mx-auto gap-[3rem]"></div>
-      Footer
-    </div>
+    <footer className="pt-32 pb-16 bg-[#02050a] text-white">
+      <div className="flex justify-center items-center border-b border-gray-400 pb-24 w-4/5 mx-auto">
+        <div className="flex space-x-6">
+          <a
+            href="https://www.linkedin.com/in/bikal-adhikari/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-16 h-16 flex items-center justify-center rounded-full bg-[#55e6a5]"
+            aria-label="LinkedIn"
+          >
+            <FaLinkedin size={32} className="text-[#02050a]" />
+          </a>
+          <a
+            href="https://github.com/Bikal-Adhikari"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-16 h-16 flex items-center justify-center rounded-full bg-[#55e6a5]"
+            aria-label="GitHub"
+          >
+            <FaGithub size={32} className="text-[#02050a]" />
+          </a>
+          <a
+            href="mailto:mail.bikaladhikari5@gmail.com"
+            className="w-16 h-16 flex items-center justify-center rounded-full bg-[#55e6a5]"
+            aria-label="Email"
+          >
+            <FaEnvelope size={32} className="text-[#02050a]" />
+          </a>
+        </div>
+      </div>
+      <div className="text-center mt-8">
+        <p>
+          &copy; Copyright {new Date().getFullYear()}. All Rights Reserved To{" "}
+          <a href="#" className="underline" aria-label="Bikal">
+            Bikal
+          </a>
+        </p>
+      </div>
+    </footer>
   );
 };
 
