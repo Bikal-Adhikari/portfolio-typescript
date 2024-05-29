@@ -36,7 +36,7 @@ const ContactMe = () => {
   };
 
   return (
-    <section className="py-16 bg-[#121212] text-white" id="connect">
+    <section className="py-16 bg-[#121212] text-white">
       <div className=" pt-[4rem] md:pt-[2rem] pb-[4rem] md:pb-[2rem]">
         <h1 className="heading">
           Contact <span className="text-yellow-400">Me</span>
