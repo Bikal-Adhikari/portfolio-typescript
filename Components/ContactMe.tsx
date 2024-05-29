@@ -37,13 +37,17 @@ const ContactMe = () => {
 
   return (
     <section className="py-16 bg-[#121212] text-white" id="connect">
+      <div className=" pt-[4rem] md:pt-[2rem] pb-[4rem] md:pb-[2rem]">
+        <h1 className="heading">
+          Contact <span className="text-yellow-400">Me</span>
+        </h1>
+      </div>
       <div className="container mx-auto flex flex-col md:flex-row items-center">
         <div className="md:w-1/2 flex justify-center md:justify-center">
           <div className="w-full h-full md:w-[500px] md:h-[400px] relative">
-            <h2 className="text-4xl font-bold mb-8">
+            <h3 className="text-4xl font-semibold mb-8">
               Get In <span className="text-yellow-400"> Touch</span>
-            </h2>
-            <h2 className="text-2xl font-bold mb-8">Contact Me....</h2>
+            </h3>
           </div>
         </div>
         <div className="md:w-1/2 mt-12 md:mt-0">
