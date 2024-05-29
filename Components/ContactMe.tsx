@@ -2,7 +2,7 @@ import { useState, ChangeEvent, FormEvent } from "react";
 
 import Image from "next/image";
 
-const Contact = () => {
+const ContactMe = () => {
   const formInitialDetails = {
     firstName: "",
     lastName: "",
@@ -38,15 +38,15 @@ const Contact = () => {
   return (
     <section className="py-16 bg-[#121212] text-white" id="connect">
       <div className="container mx-auto flex flex-col md:flex-row items-center">
-        <div className="md:w-1/2 flex justify-center md:justify-start">
-          {/* <Image
-            src="/images/profile3.jpg"
-            alt="Contact Us"
-            className="w-[80%] md:w-full transition-transform duration-700 transform hover:scale-105"
-          /> */}
+        <div className="md:w-1/2 flex justify-center md:justify-center">
+          <div className="w-full h-full md:w-[500px] md:h-[400px] relative">
+            <h2 className="text-4xl font-bold mb-8">
+              Get In <span className="text-yellow-400"> Touch</span>
+            </h2>
+            <h2 className="text-2xl font-bold mb-8">Contact Me....</h2>
+          </div>
         </div>
         <div className="md:w-1/2 mt-12 md:mt-0">
-          <h2 className="text-4xl font-bold mb-8">Get In Touch</h2>
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <input
@@ -122,4 +122,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default ContactMe;
