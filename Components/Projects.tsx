@@ -39,23 +39,37 @@ const Projects = () => {
           </div>
         </div>
         <div data-aos="fade-up" data-aos-delay="900">
-          <div className="transform cursor-pointer hover:-translate-y-6 transition-all duration-200 relative w-[100%] h-[200px] md:h-[300px]">
+          <div className="transform cursor-pointer hover:-translate-y-6 transition-all duration-200 relative w-[100%] h-[200px] md:h-[300px] group">
             <Image
-              src="/images/p4.jpg"
+              src="/images/NotesApp.png"
               alt="projects"
               layout="fill"
               className="object-contain"
             />
+            <a
+              href="https://notes-memo.netlify.app/"
+              className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+              target="_blank"
+            >
+              Notes App
+            </a>
           </div>
         </div>
         <div data-aos="fade-up" data-aos-delay="1200">
-          <div className="transform cursor-pointer hover:-translate-y-6 transition-all duration-200 relative w-[100%] h-[200px] md:h-[300px]">
+          <div className="relative w-[100%] h-[200px] md:h-[300px] transform cursor-pointer hover:-translate-y-6 transition-all duration-200 group">
             <Image
-              src="/images/p5.jpg"
+              src="/images/DogTinder.png"
               alt="projects"
               layout="fill"
               className="object-contain"
             />
+            <a
+              href="https://lovefordog.netlify.app/"
+              className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+              target="_blank"
+            >
+              Dog Tinder
+            </a>
           </div>
         </div>
       </div>
