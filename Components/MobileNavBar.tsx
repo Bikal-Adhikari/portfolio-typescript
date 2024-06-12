@@ -1,5 +1,4 @@
 import { XMarkIcon } from "@heroicons/react/16/solid/index.js";
-import Link from "next/link";
 import React from "react";
 
 interface Props {

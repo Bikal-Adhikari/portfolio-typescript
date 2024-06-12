@@ -2,10 +2,7 @@ import React from "react";
 import Particle from "./Particle";
 import TextEffect from "./TextEffect";
 import Image from "next/image";
-import {
-  ArrowDownTrayIcon,
-  PlayCircleIcon,
-} from "@heroicons/react/16/solid/index.js";
+import { ArrowDownTrayIcon } from "@heroicons/react/16/solid/index.js";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 const Hero = () => {
