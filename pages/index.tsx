@@ -9,7 +9,7 @@ import Skills from "@/Components/Skills";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 const HomePage = () => {
   const [nav, setNav] = useState(false);
@@ -40,24 +40,44 @@ const HomePage = () => {
       anchorPlacement: "top-bottom", // defines which position of the element regarding to window should trigger the animation
     });
   }, []);
+  const homeRef = useRef<HTMLDivElement>(null);
+  const aboutRef = useRef<HTMLDivElement>(null);
+  const skillsRef = useRef<HTMLDivElement>(null);
+  const projectsRef = useRef<HTMLDivElement>(null);
+  const contactRef = useRef<HTMLDivElement>(null);
   return (
     <div className="overflow-x-hidden">
       <div>
         {/* NavBar  */}
         <MobileNavBar nav={nav} navClose={navClose} />
-        <NavBar navOpen={navOpen} />
+        <NavBar
+          navOpen={navOpen}
+          scrollToSection={(ref) =>
+            ref.current?.scrollIntoView({ behavior: "smooth" })
+          }
+          homeRef={homeRef}
+          aboutRef={aboutRef}
+          skillsRef={skillsRef}
+          projectsRef={projectsRef}
+          contactRef={contactRef}
+        />
 
-        {/* Hero Section  */}
-        <Hero />
+        <div ref={homeRef}>
+          <Hero />
+        </div>
         <div className="relative z-[30]">
-          {/* about me  */}
-          <About />
-          {/* skills  */}
-          <Skills />
-          <Projects />
-          {/* Contact Me */}
-
-          <ContactMe />
+          <div ref={aboutRef}>
+            <About />
+          </div>
+          <div ref={skillsRef}>
+            <Skills />
+          </div>
+          <div ref={projectsRef}>
+            <Projects />
+          </div>
+          <div ref={contactRef}>
+            <ContactMe />
+          </div>
 
           <Footer />
         </div>

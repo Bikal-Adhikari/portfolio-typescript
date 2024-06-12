@@ -36,7 +36,12 @@ const Footer = () => {
       <div className="text-center mt-8">
         <p>
           &copy; Copyright {new Date().getFullYear()}. All Rights Reserved To{" "}
-          <a href="#" className="underline" aria-label="Bikal">
+          <a
+            href="https://www.linkedin.com/in/bikal-adhikari/"
+            target="_blank"
+            className="underline"
+            aria-label="Bikal"
+          >
             Bikal
           </a>
         </p>
