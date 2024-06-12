@@ -49,7 +49,18 @@ const HomePage = () => {
     <div className="overflow-x-hidden">
       <div>
         {/* NavBar  */}
-        <MobileNavBar nav={nav} navClose={navClose} />
+        <MobileNavBar
+          nav={nav}
+          navClose={navClose}
+          scrollToSection={(ref) =>
+            ref.current?.scrollIntoView({ behavior: "smooth" })
+          }
+          homeRef={homeRef}
+          aboutRef={aboutRef}
+          skillsRef={skillsRef}
+          projectsRef={projectsRef}
+          contactRef={contactRef}
+        />
         <NavBar
           navOpen={navOpen}
           scrollToSection={(ref) =>
