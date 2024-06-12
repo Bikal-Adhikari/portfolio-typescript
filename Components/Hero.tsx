@@ -6,6 +6,7 @@ import {
   ArrowDownTrayIcon,
   PlayCircleIcon,
 } from "@heroicons/react/16/solid/index.js";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 const Hero = () => {
   return (
@@ -26,12 +27,24 @@ const Hero = () => {
               <p>Download CV</p>
               <ArrowDownTrayIcon className="w-[1.6rem] h-[1.7rem] text-black" />
             </button>
-            <button className="flex items-center space-x-2">
-              <PlayCircleIcon className="w-[4rem] h-[4rem] hover:text-yellow-400transition-all duration-200 text-[#55e6a5]" />
-              <p className="text-[20px] font-semibold text-white">
-                Watch the video
-              </p>
-            </button>
+            <a
+              href="https://www.linkedin.com/in/bikal-adhikari/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-16 h-16 flex items-center justify-center rounded-full bg-[#55e6a5]"
+              aria-label="LinkedIn"
+            >
+              <FaLinkedin size={32} className="text-[#02050a]" />
+            </a>
+            <a
+              href="https://github.com/Bikal-Adhikari"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-16 h-16 flex items-center justify-center rounded-full bg-[#55e6a5]"
+              aria-label="GitHub"
+            >
+              <FaGithub size={32} className="text-[#02050a]" />
+            </a>
           </div>
         </div>
         <div
