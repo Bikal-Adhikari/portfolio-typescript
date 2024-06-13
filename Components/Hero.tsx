@@ -49,7 +49,7 @@ const Hero = () => {
           className="w-[500px] hidden bg-[#55e6a5] relative lg:flex items-center rounded-full h-[500px]"
         >
           <Image
-            src="/images/Profile2.jpg"
+            src="/images/profile2.jpg"
             alt="myProfile"
             layout="fill"
             className="object-cover rounded-full"
