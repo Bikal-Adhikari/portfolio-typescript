@@ -11,7 +11,7 @@ const Projects = () => {
         <div data-aos="fade-up">
           <div className="transform cursor-pointer hover:-translate-y-6 transition-all duration-200 relative w-[100%] h-[200px] md:h-[300px] group">
             <Image
-              src="/images/p1.jpg"
+              src="/images/libraryManagement.png"
               alt="projects"
               layout="fill"
               className="object-contain"
