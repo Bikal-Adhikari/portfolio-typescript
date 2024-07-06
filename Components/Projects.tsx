@@ -17,15 +17,15 @@ const Projects = () => {
               className="object-contain"
             />
             <a
-              href="https://game-react-tictactoe.netlify.app/"
+              href="https://library-client-xi.vercel.app/"
               className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-200"
               target="_blank"
             >
-              TicTacToe App
+              Library Management App
             </a>
           </div>
         </div>
-        <div data-aos="fade-up" data-aos-delay="300">
+        {/* <div data-aos="fade-up" data-aos-delay="300">
           <div className="transform cursor-pointer hover:-translate-y-6 transition-all duration-200 relative w-[100%] h-[200px] md:h-[300px] group">
             <Image
               src="/images/p2.jpg"
@@ -41,7 +41,7 @@ const Projects = () => {
               TicTacToe App
             </a>
           </div>
-        </div>
+        </div> */}
         <div data-aos="fade-up" data-aos-delay="600">
           <div className="transform cursor-pointer hover:-translate-y-6 transition-all duration-200 relative w-[100%] h-[200px] md:h-[300px] group">
             <Image
