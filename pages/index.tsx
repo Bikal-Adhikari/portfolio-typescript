@@ -8,6 +8,7 @@ import Projects from "@/Components/Projects";
 import Skills from "@/Components/Skills";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Image from "next/image";
 
 import React, { useEffect, useRef, useState } from "react";
 
@@ -15,6 +16,11 @@ const HomePage = () => {
   const [nav, setNav] = useState(false);
   const navOpen = () => setNav(true);
   const navClose = () => setNav(false);
+  const [isChatbotOpen, setChatbotOpen] = useState(false);
+
+  const toggleChatbot = () => {
+    setChatbotOpen(!isChatbotOpen);
+  };
 
   useEffect(() => {
     // You can also pass an optional settings object
@@ -96,12 +102,26 @@ const HomePage = () => {
           </div>
 
           {/* Chatbot Iframe */}
-          <div className="chatbot-container">
-            <iframe
-              className="chatbot-iframe"
-              src="https://www.chatbase.co/chatbot-iframe/Wub3n_l4kx3WCs0vu1B6r"
-              title="Chatbot"
-            ></iframe>
+          {/* Chatbot Icon and Iframe */}
+          <div className="chatbot-icon-container">
+            <button className="chatbot-icon" onClick={toggleChatbot}>
+              {/* Replace with an actual icon, e.g., chat bubble or robot */}
+              <Image
+                src="/images/chatbot-icon.jpg"
+                alt="Chatbot Icon"
+                layout="fill"
+                className="object-cover rounded-full"
+              />
+            </button>
+            {isChatbotOpen && (
+              <div className="chatbot-container">
+                <iframe
+                  className="chatbot-iframe"
+                  src="https://www.chatbase.co/chatbot-iframe/Wub3n_l4kx3WCs0vu1B6r"
+                  title="Chatbot"
+                ></iframe>
+              </div>
+            )}
           </div>
 
           <Footer />
