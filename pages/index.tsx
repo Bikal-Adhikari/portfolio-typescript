@@ -17,6 +17,8 @@ const HomePage = () => {
   const navOpen = () => setNav(true);
   const navClose = () => setNav(false);
   const [isChatbotOpen, setChatbotOpen] = useState(false);
+  const [isIframeVisible, setIframeVisible] = useState(false);
+  const iframeRef = useRef(null);
 
   const toggleChatbot = () => {
     setChatbotOpen(!isChatbotOpen);
@@ -49,6 +51,27 @@ const HomePage = () => {
     window.embeddedChatbotConfig = {
       chatbotId: "Wub3n_l4kx3WCs0vu1B6r",
       domain: "www.chatbase.co",
+    };
+    const currentIframeRef = iframeRef.current; // Copy the ref value
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIframeVisible(true);
+          observer.unobserve(entry.target);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (currentIframeRef) {
+      observer.observe(currentIframeRef);
+    }
+
+    return () => {
+      if (currentIframeRef) {
+        observer.unobserve(currentIframeRef);
+      }
     };
   }, []);
   const homeRef = useRef<HTMLDivElement>(null);
@@ -101,23 +124,32 @@ const HomePage = () => {
             <ContactMe />
           </div>
 
-          {/* Chatbot Iframe */}
           {/* Chatbot Icon and Iframe */}
           <div className="chatbot-icon-container">
-            <button className="chatbot-icon" onClick={toggleChatbot}>
-              {/* Replace with an actual icon, e.g., chat bubble or robot */}
-              <Image
-                src="/images/chatbot-icon.jpg"
-                alt="Chatbot Icon"
-                layout="fill"
-                className="object-cover rounded-full"
-              />
+            <button
+              className="chatbot-icon"
+              onClick={toggleChatbot}
+              aria-label="Open Chatbot"
+            >
+              <div className="relative w-10 h-10">
+                <Image
+                  src="/images/chatbot-icon.jpg"
+                  alt="Chatbot Icon"
+                  fill
+                  className="object-cover rounded-full"
+                />
+              </div>
             </button>
             {isChatbotOpen && (
               <div className="chatbot-container">
                 <iframe
+                  ref={iframeRef}
                   className="chatbot-iframe"
-                  src="https://www.chatbase.co/chatbot-iframe/Wub3n_l4kx3WCs0vu1B6r"
+                  src={
+                    isIframeVisible
+                      ? "https://www.chatbase.co/chatbot-iframe/Wub3n_l4kx3WCs0vu1B6r"
+                      : ""
+                  }
                   title="Chatbot"
                 ></iframe>
               </div>
