@@ -39,6 +39,11 @@ const HomePage = () => {
       mirror: false, // whether elements should animate out while scrolling past them
       anchorPlacement: "top-bottom", // defines which position of the element regarding to window should trigger the animation
     });
+    // Configure the chatbot settings if needed
+    window.embeddedChatbotConfig = {
+      chatbotId: "Wub3n_l4kx3WCs0vu1B6r",
+      domain: "www.chatbase.co",
+    };
   }, []);
   const homeRef = useRef<HTMLDivElement>(null);
   const aboutRef = useRef<HTMLDivElement>(null);
@@ -88,6 +93,15 @@ const HomePage = () => {
           </div>
           <div ref={contactRef}>
             <ContactMe />
+          </div>
+
+          {/* Chatbot Iframe */}
+          <div className="chatbot-container">
+            <iframe
+              className="chatbot-iframe"
+              src="https://www.chatbase.co/chatbot-iframe/Wub3n_l4kx3WCs0vu1B6r"
+              title="Chatbot"
+            ></iframe>
           </div>
 
           <Footer />
