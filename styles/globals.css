@@ -29,7 +29,7 @@
     position: relative;
     width: 100%;
     height: 100%;
-    background-color: #fff;
+    background-color: #ffffff; /* White background color */
     border: none;
     border-radius: 50%;
     cursor: pointer;
@@ -48,10 +48,11 @@
     width: 320px;
     height: 450px;
     border: none;
+    background-color: #ffffff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     overflow: hidden;
-    display: flex; /* Ensure the iframe is shown */
+    display: flex;
   }
 
   .chatbot-iframe {

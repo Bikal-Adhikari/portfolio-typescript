@@ -18,11 +18,7 @@ const HomePage = () => {
   const navClose = () => setNav(false);
   const [isChatbotOpen, setChatbotOpen] = useState(false);
   const [isIframeVisible, setIframeVisible] = useState(false);
-  const iframeRef = useRef(null);
-
-  const toggleChatbot = () => {
-    setChatbotOpen(!isChatbotOpen);
-  };
+  const iframeRef = useRef<HTMLIFrameElement>(null);
 
   useEffect(() => {
     // You can also pass an optional settings object
@@ -52,7 +48,8 @@ const HomePage = () => {
       chatbotId: "Wub3n_l4kx3WCs0vu1B6r",
       domain: "www.chatbase.co",
     };
-    const currentIframeRef = iframeRef.current; // Copy the ref value
+
+    const currentIframeRef = iframeRef.current;
 
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -74,6 +71,20 @@ const HomePage = () => {
       }
     };
   }, []);
+
+  const toggleChatbot = () => {
+    if (isChatbotOpen && iframeRef.current) {
+      // Reset the iframe when closing
+      const iframe = iframeRef.current;
+      iframe.src = ""; // Clear the src
+      setTimeout(() => {
+        iframe.src =
+          "https://www.chatbase.co/chatbot-iframe/Wub3n_l4kx3WCs0vu1B6r"; // Reset the src
+      }, 100);
+    }
+    setChatbotOpen((prevState) => !prevState);
+  };
+
   const homeRef = useRef<HTMLDivElement>(null);
   const aboutRef = useRef<HTMLDivElement>(null);
   const skillsRef = useRef<HTMLDivElement>(null);
