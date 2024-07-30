@@ -26,6 +26,15 @@ const projectArray: Project[] = [
     ],
   },
   {
+    projectColor: "before:bg-green-400",
+    projectUrl: "https://www.bikaladhikari.com",
+    projectImg: "/images/portfolio.png",
+    projectTitle: "Personal Portfolio",
+    projectDescription:
+      "Showcasing my work and skills, this portfolio uses Next.js, Tailwind CSS, and TypeScript for a sleek, responsive design. Explore my projects and experience a smooth, interactive interface.",
+    projectLang: ["Nextjs", "TailwindCSS", "TypeScript"],
+  },
+  {
     projectColor: "before:bg-blue-500",
     projectUrl: "https://game-react-tictactoe.netlify.app/",
     projectImg: "/images/Tictactoe.png",
@@ -52,15 +61,7 @@ const projectArray: Project[] = [
       "A fun and interactive web application inspired by the popular dating app Tinder, but for dog lovers! Dog Tinder allows users to browse through a collection of adorable dog profiles.",
     projectLang: ["HTML", "BootStrapCSS", "Javascript"],
   },
-  // {
-  //   projectColor: "before:bg-green-400",
-  //   projectUrl: "https://github.com/DelrosarioRovic/Grocery-app/",
-  //   projectImg: grocery,
-  //   projectTitle: "Grocery App",
-  //   projectDescription:
-  //     "Discover simplicity in grocery shopping with our streamlined Grocery App. Effortlessly create lists and receive personalized recommendations. Experience convenience at your fingertips. Download now for an enhanced shopping journey.",
-  //   projectLang: ["React-native", "Expo", "Node.Js"],
-  // },
+
   // {
   //   projectColor: "before:bg-gray-200",
   //   projectUrl: "",
