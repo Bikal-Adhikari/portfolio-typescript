@@ -73,16 +73,18 @@ const HomePage = () => {
   }, []);
 
   const toggleChatbot = () => {
-    if (isChatbotOpen && iframeRef.current) {
-      // Reset the iframe when closing
-      const iframe = iframeRef.current;
-      iframe.src = ""; // Clear the src
-      setTimeout(() => {
-        iframe.src =
-          "https://www.chatbase.co/chatbot-iframe/Wub3n_l4kx3WCs0vu1B6r"; // Reset the src
-      }, 100);
-    }
-    setChatbotOpen((prevState) => !prevState);
+    setChatbotOpen((prevState) => {
+      if (prevState && iframeRef.current) {
+        // Reset iframe content
+        const iframe = iframeRef.current;
+        iframe.src = "";
+        setTimeout(() => {
+          iframe.src =
+            "https://www.chatbase.co/chatbot-iframe/Wub3n_l4kx3WCs0vu1B6r";
+        }, 100);
+      }
+      return !prevState;
+    });
   };
 
   const homeRef = useRef<HTMLDivElement>(null);
@@ -156,12 +158,9 @@ const HomePage = () => {
                 <iframe
                   ref={iframeRef}
                   className="chatbot-iframe"
-                  src={
-                    isIframeVisible
-                      ? "https://www.chatbase.co/chatbot-iframe/Wub3n_l4kx3WCs0vu1B6r"
-                      : ""
-                  }
+                  src="https://www.chatbase.co/chatbot-iframe/Wub3n_l4kx3WCs0vu1B6r"
                   title="Chatbot"
+                  style={{ border: "none" }}
                 ></iframe>
               </div>
             )}

@@ -53,7 +53,7 @@ const Hero = () => {
           <Image
             src="/images/profile2.jpg"
             alt="myProfile"
-            layout="fill"
+            fill
             className="object-cover rounded-full"
           />
         </div>

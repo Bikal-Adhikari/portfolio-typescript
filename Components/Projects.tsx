@@ -20,7 +20,7 @@ const Projects: React.FC = () => {
               <Image
                 src={project.projectImg}
                 alt={project.projectTitle}
-                layout="fill"
+                fill
                 className="object-contain rounded-t-lg"
               />
               <a
